@@ -3,18 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-//Usar el Modelo de los Codigos
-use App\Models\Codigos;
+use App\Models\Catalogo;
+use App\Models\CodigosPostales;
 
 class GeneralController extends Controller
 {
+    //Función raiz del proyecto, redirecciona al Index
     public function raiz(){
-        return redirect()->route('inicio');
+        return redirect()->route('index');
     }
 
     //Función de Inicio o Index
-    public function inicio(){
+    public function index(){
+
         return view('index');
     }
 }

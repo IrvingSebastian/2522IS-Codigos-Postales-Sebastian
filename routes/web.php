@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-//Controlador
-use App\Http\Controllers\GeneralController;
+use App\Controllers\GeneralController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +14,5 @@ use App\Http\Controllers\GeneralController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-//Rutas
 Route::get('/', [GeneralController::class,'raiz']) ->name('raiz');
-Route::get('/inicio', [GeneralController::class,'inicio']) ->name('inicio');
+Route::get('/index', [GeneralController::class,'index']) ->name('index');
