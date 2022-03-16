@@ -26,48 +26,50 @@
           <div class="subject">
             <select placeholder="Subject line" name="subject" id="subject_input" required>
               <option disabled hidden selected>Asentamiento</option>
-              <option>I'd like to start a project</option>
-              <option>I'd like to ask a question</option>
-              <option>I'd like to make a proposal</option>
+
+              @foreach($Catalogo as $catalo)
+                <option>{{$catalo['Asentamiento']}}</option>
+              @endforeach
+
             </select>
           </div>
 
           <div class="subject">
             <select placeholder="Subject line" name="subject" id="subject_input" required>
               <option disabled hidden selected>Tipo de Asentamiento</option>
-              <option>I'd like to start a project</option>
-              <option>I'd like to ask a question</option>
-              <option>I'd like to make a proposal</option>
+              @foreach($Catalogo as $catalo)
+                <option>{{$catalo['Tipo_Asenta']}}</option>
+              @endforeach
             </select>
           </div>
 
           <div class="subject">
             <select placeholder="Subject line" name="subject" id="subject_input" required>
               <option disabled hidden selected>Municipio</option>
-              <option>I'd like to start a project</option>
-              <option>I'd like to ask a question</option>
-              <option>I'd like to make a proposal</option>
+              @foreach($Catalogo as $catalo)
+                <option>{{$catalo['Municipio']}}</option>
+              @endforeach
             </select>
           </div>
 
           <div class="subject">
             <select placeholder="Subject line" name="subject" id="subject_input" required>
               <option disabled hidden selected>Estado</option>
-              <option>I'd like to start a project</option>
-              <option>I'd like to ask a question</option>
-              <option>I'd like to make a proposal</option>
+              @foreach($Catalogo as $catalo)
+                <option>{{$catalo['Estado']}}</option>
+              @endforeach
             </select>
           </div>
 
           <div class="subject">
             <select placeholder="Subject line" name="subject" id="subject_input" required>
               <option disabled hidden selected>Ciudad</option>
-              <option>I'd like to start a project</option>
-              <option>I'd like to ask a question</option>
-              <option>I'd like to make a proposal</option>
+              @foreach($Catalogo as $catalo)
+                <option>{{$catalo['Ciudad']}}</option>
+              @endforeach
             </select>
           </div>
-        </form><!-- // End form -->
-    </div><!-- // End #container -->
+        </form>
+    </div>
 </body>
 </html>
