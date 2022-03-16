@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Controllers\GeneralController;
+use App\Http\Controllers\GeneralController;
 
 /*
 |--------------------------------------------------------------------------
