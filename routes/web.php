@@ -14,5 +14,9 @@ use App\Http\Controllers\GeneralController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//Rutas
 Route::get('/', [GeneralController::class,'raiz']) ->name('raiz');
 Route::get('/index', [GeneralController::class,'index']) ->name('index');
+Route::post('/codigo', [GeneralController::class,'codigo']) ->name('codigo');
+

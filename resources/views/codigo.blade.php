@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="/style.css" rel="stylesheet"/>
-    <title>Códigos Postales - Inicio</title>
+    <title>Códigos Postales - {{$codigo}}</title>
 </head>
 <body>
         <div id="container">
@@ -18,17 +18,54 @@
             <path d="M70.865,101.78c0,4.774,3.886,8.657,8.66,8.657c4.774,0,8.657-3.883,8.657-8.657c0-4.773-3.883-8.656-8.657-8.656    C74.751,93.124,70.865,97.006,70.865,101.78z"></path>
           </svg>
         </div>
-        <form action="{{route('codigo')}}" method="post" id="contact_form">
-          @foreach ($errors->all() as $error)
-                <p class="alert alert-danger">{{ $error}}</p><br>
-            @endforeach
-            {!! csrf_field() !!}
-
+        <form>
           <div class="telephone">
-            <input type="text" placeholder="Código Postal" name="codigo" id="codigo" maxlength="5" required>
+            <input type="text" placeholder="{{$codigo}}" name="name" id="codigo" maxlength="5" disabled>
           </div>
-          <div class="submit">
-            <input type="submit" value="Buscar" id="btn_Buscar"/>
+
+          <div class="subject">
+            <select placeholder="Subject line" name="subject" id="subject_input" required>
+              <option disabled hidden selected>Asentamiento</option>
+              <option>I'd like to start a project</option>
+              <option>I'd like to ask a question</option>
+              <option>I'd like to make a proposal</option>
+            </select>
+          </div>
+
+          <div class="subject">
+            <select placeholder="Subject line" name="subject" id="subject_input" required>
+              <option disabled hidden selected>Tipo de Asentamiento</option>
+              <option>I'd like to start a project</option>
+              <option>I'd like to ask a question</option>
+              <option>I'd like to make a proposal</option>
+            </select>
+          </div>
+
+          <div class="subject">
+            <select placeholder="Subject line" name="subject" id="subject_input" required>
+              <option disabled hidden selected>Municipio</option>
+              <option>I'd like to start a project</option>
+              <option>I'd like to ask a question</option>
+              <option>I'd like to make a proposal</option>
+            </select>
+          </div>
+
+          <div class="subject">
+            <select placeholder="Subject line" name="subject" id="subject_input" required>
+              <option disabled hidden selected>Estado</option>
+              <option>I'd like to start a project</option>
+              <option>I'd like to ask a question</option>
+              <option>I'd like to make a proposal</option>
+            </select>
+          </div>
+
+          <div class="subject">
+            <select placeholder="Subject line" name="subject" id="subject_input" required>
+              <option disabled hidden selected>Ciudad</option>
+              <option>I'd like to start a project</option>
+              <option>I'd like to ask a question</option>
+              <option>I'd like to make a proposal</option>
+            </select>
           </div>
         </form><!-- // End form -->
     </div><!-- // End #container -->

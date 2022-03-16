@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Catalogo extends Model
 {
     use HasFactory;
+
+    //Tabla Resultante del Seeder
+    protected $table = 'codigos';
 }

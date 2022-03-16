@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Catalogo;
-use App\Models\CodigosPostales;
+
+use App\Http\Requests\CodigoRequest;
 
 class GeneralController extends Controller
 {
@@ -17,5 +18,11 @@ class GeneralController extends Controller
     public function index(){
 
         return view('index');
+    }
+
+    public function codigo(CodigoRequest $request){
+        $codigo = $request->get('codigo');
+
+        return view('codigo', ['codigo'=>$codigo]);
     }
 }
