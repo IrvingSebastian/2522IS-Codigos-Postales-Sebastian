@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+//Controlador
+use App\Http\Controllers\GeneralController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Rutas
+Route::get('/', [GeneralController::class,'raiz']) ->name('raiz');
+Route::get('/inicio', [GeneralController::class,'inicio']) ->name('inicio');
