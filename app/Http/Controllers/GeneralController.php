@@ -1,12 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 
 //Modelo de la Tabla Creada
 use App\Models\Catalogo;
-
 //Request del Codigo
 use App\Http\Requests\CodigoRequest;
 
@@ -19,7 +17,6 @@ class GeneralController extends Controller
 
     //Función de Inicio o Index
     public function index(){
-
         return view('index');
     }
 
@@ -28,7 +25,6 @@ class GeneralController extends Controller
         $Catalogo = Catalogo::select("*")
             ->where("Codigo", "=", $codigo)
             ->get();
-
         return view('codigo', ['codigo'=>$codigo, 'Catalogo'=>$Catalogo]);
     }
 }
